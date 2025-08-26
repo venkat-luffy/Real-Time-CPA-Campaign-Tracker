@@ -1,0 +1,43 @@
+*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Real-Time CPA Campaign Tracker</title>
+    <script scr="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="topnav">
+        <a href="/">Dashboard</a>
+        <a href="/campaigns">Campaigns</a>
+        <a href="/simulation">Simulation</a>
+        <a href="/reports">Reports</a>
+    </nav>
+    <main class="container">
+        <h1>Dashboard</h1>
+        <section class="cards" id="kpi-cards">
+            <div class="card"><div class="kpi-title">clicks</div><div class="kpi-value" id="kpi-clicks">0</div></div>
+            <div class="card"><div class="kpi-title">conversions</div><div class="kpi-value" id="kpi-conversions">0</div></div>
+            <div class="card"><div class="kpi-title">CPA</div><div class="kpi-value" id="kpi-cpa">$0</div></div>
+            <div class="card"><div class="kpi-title">CTR</div><div class="kpi-value" id="kpi-ctr">0%</div></div>
+        </section>
+        <section class="grid-2">
+            <div class="panel">
+                <h3>Last 7 Days</h3>
+                <canvas id="seriesChart" height="140"></canvas>
+            </div>
+            <div class="panel">
+                <h3>Quick Action</h3>
+                <label>Campaign:</label>
+                <select id="campaignselect"></select>
+                <div class="action-row">
+                    <button id="btnClick">Log Click</button>
+                    <button id="btnConversion">Log Conversions</button>
+                    <a class="secondary" href="/api/report.csv">Download CSV Report</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
