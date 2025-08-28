@@ -1,0 +1,14 @@
+: root {
+    --bg: #0b0c10;
+    --panel: #12141a;
+    --text: #e8edf3;
+    --muted: #a6b0c0;
+    --accent: #4da3ff;
+    --accent-2: #7cc7ff;
+    --border: #1e2330;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, segoe UI, Roboto, "Helvetica Neue", Arial;
+    color: var(--text); background: linear
+}
